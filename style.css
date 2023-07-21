@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(#fcf7f8, #f7ecee);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+.etch-a-sketch {
+  height: 100%;
+  width: 100%;
+  max-height: 700px;
+  max-width: 600px;
+  margin: 1rem;
+  box-shadow: 0px 4px 8px #00000035;
+  border-radius: 12px
+}
+
+
+header {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+  background: #c41826;
+  width: 100%;
+  height: 100px;
+  padding: 1rem 1rem 0;
+  border-radius: 4px 4px 0 0;
+}
+
+h1 {
+  font-family: 'Silkscreen', sans-serif;
+  margin: 0 0 0.4rem;
+  color: #fff;
+}
+
+div span, .sub-heading {
+  color: #ead2d2;
+  margin: 0;
+}
+
+button {
+  width: auto;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #c41826;
+  padding: 10px 16px;
+  margin-left: .8rem;
+}
+
+button:hover {
+  background-color: white;
+  color: #c41826;
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 600px;
+  border-radius: 0px 0px 4px 4px;
+  background-color: #c41826;
+  padding: 1rem;
+}
+
+.cell {
+  background-color: #fff;
+}
+
+.cell.drawn {
+  background-color: #000;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vw - 2rem);
+  }
+
+  .etch-a-sketch {
+    height: calc((100vw - 2rem) + 100px);
+  }
+}
