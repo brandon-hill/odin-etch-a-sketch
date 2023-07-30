@@ -30,22 +30,22 @@ function createGrid(size) {
 function getNewSize() {
 	let newSize = +prompt(
 		'Enter the number of pixels you want on each side of the grid\nMust be between 10 and 100',
-		'16'
+		`${size}`
 	);
 	if (newSize && newSize >= 10 && newSize <= 100) {
-		console.log(newSize);
+		size = newSize;
 		return newSize;
 	} else {
-		getNewSize();
+		alert('Invalid entry, enter a number between 1 and 100');
+		return;
 	}
 }
 
 changeGridBtn.addEventListener('click', (e) => {
 	let newSize = '';
-	do {
+	while (!newSize) {
 		newSize = getNewSize();
-	} while (!newSize);
-
+	}
 	createGrid(newSize);
 });
 
